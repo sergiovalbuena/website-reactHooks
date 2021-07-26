@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import styled from 'styled-components';
 import {H1, MediumText} from '../styles/TextStyles';
 import { themes } from '../styles/ColorStyles';
+import PurchaseButton from '../buttons/PurchaseButton';
 
 function HeroSection(){
     return(
@@ -10,9 +11,12 @@ function HeroSection(){
             <ContentWrapper>
                 <TextWrapper>
                 <img src="/images/logos/logo.svg" alt="logo" />
-                <Title>Hi, <br/> people</Title>
-                <Description>Welcome to your new Gatsby site.</Description>
-                <Link to="/page-2/">Go to page 2</Link> <br />
+                <Title>Creating a<br/> better world</Title>
+                <Description>using design, creativity and technology</Description>
+                <PurchaseButton 
+                    title= "Start Learning"
+                    subtitle= "120+ hours of video"
+                />
                 </TextWrapper>
             </ContentWrapper>
         </Wrapper>
