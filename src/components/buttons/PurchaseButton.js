@@ -61,11 +61,12 @@ const Wrapper = styled.div`
 
         .icon{
             transform: scale(1.2);
-            filter: hue-rotate(100deg);
-        }
+            filter: hue-rotate(10deg) brightness(150%) saturate(120%);        }
 
     }
 `
+//https://developer.mozilla.org/en-US/docs/Web/CSS/filter
+
 const TextWrapper = styled.div`
     display: grid;
     gap: 4px
