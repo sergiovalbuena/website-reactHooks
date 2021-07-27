@@ -11,7 +11,7 @@ function HeroSection(){
             <ContentWrapper>
                 <TextWrapper>
                 <img src="/images/logos/logo.svg" alt="logo" />
-                <Title>Creating a<br/> better world</Title>
+                <Title>Creating a better world through design and code</Title>
                 <Description>using design, creativity and technology</Description>
                 <PurchaseButton 
                     title= "Start Learning"
@@ -41,7 +41,7 @@ const TextWrapper = styled.div`
 `;
 
 const Title = styled(H1)`
-    color: ${themes.light.text1};
+    color: ${themes.dark.text1};
 `;
 
 const Description = styled(MediumText) ``
