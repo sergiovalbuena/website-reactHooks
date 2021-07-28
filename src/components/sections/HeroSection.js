@@ -14,7 +14,7 @@ function HeroSection(){
             <ContentWrapper>
                 <TextWrapper>
                 <Title>Creating a better world </Title>
-                <Description>through design, code & magic</Description>
+                <Description>through <span> design, code & magic </span> </Description>
                 <PurchaseButton 
                     title= "Tell us about your Project"
                     subtitle= "Free Consultation"
@@ -43,6 +43,12 @@ const ContentWrapper = styled.div`
     padding: 200px 30px;
     display: grid;
     grid-template-columns: 360px auto;
+
+    @media (max-width: 450px){
+        grid-template-columns: auto;
+        gap: 60px;
+        padding: 150px 20px 250px;
+    }
 `;
 
 const TextWrapper = styled.div`
@@ -72,6 +78,27 @@ const Title = styled(H1)`
     /*    opacity: 0;
         animation: ${animation} 1s .2s forwards; 
         */
-`;
+    background: linear-gradient(180deg, #730040 0%, #301CBE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
-const Description = styled(MediumText) ``
+    @media(max-width: 450px){
+        font-size: 48px;
+    }
+
+
+`
+
+const Description = styled(MediumText) `
+    font-size: 18px;
+    color: white;
+
+    span {
+        font-weight: 800;
+        background: linear-gradient(180deg, #ffd7ff 0%, #ffb6ff 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+`

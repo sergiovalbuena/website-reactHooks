@@ -18,6 +18,14 @@ const Wrapper = styled.div`
     position: relative;
     perspective: 5000;
 
+    @media (max-width: 768px){
+        transform: scale(.6);
+        transform-origin: top left;
+    }
+    @media(max-width: 450px){
+        transform:scale(.4);
+    }
+
     div{
         transform: rotateY(20deg) rotateX(-20deg);
         transform-origin: bottom left; 
