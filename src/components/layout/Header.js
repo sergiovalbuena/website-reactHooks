@@ -1,20 +1,18 @@
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 import React from 'react';
 import styled from "styled-components";
 import {menuData} from '../../data/menuData';
+import MenuButton from "../buttons/MenuButton"
 
 export default function Header() {
     return(
         <Wrapper>
+            <Link to="/">
             <img src="/images/logos/logo.svg" alt="logo"/>
-            <MenuWrapper>
+            </Link>
+            <MenuWrapper count={menuData.length}>
             {menuData.map((item, index) =>(
-                <Link to={item.link} key={index}>
-                <MenuItem>
-                <img src={item.icon} alt={item.title}/>
-                {item.title}
-                </MenuItem>
-                </Link>
+                <MenuButton item={item} key={index}/>
             ))}
             </MenuWrapper>
         </Wrapper>
@@ -34,23 +32,5 @@ const Wrapper = styled.div `
 const MenuWrapper = styled.div`
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(5, auto);
-`
-const MenuItem = styled.div`
-    color: rgba(255,255,255,.7);
-    display: grid;
-    grid-template-columns: 24px auto;
-    gap: 10px;
-    align-items: center;
-    padding: 10px;
-    transition: .6s ease-out;
-
-    :hover{
-        background: rgba(255,255,255,.1);
-        box-shadow: 
-            0px 10px 20px rgba(0,0,0.1),
-            inset 0 0 0 .5px rgba(255,255,255,.2);
-        border-radius: 10px;
-
-    }
+    grid-template-columns: repeat(${props=>props.count}, auto);
 `
